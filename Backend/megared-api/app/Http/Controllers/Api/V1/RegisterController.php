@@ -33,13 +33,13 @@ class RegisterController extends Controller
      */
     public function store(RegisterRequest $request)
     {
-        $request->validate();
+        $validated = $request->validated();
         $user= new User;
 
         $user->name=$request->name;
         $user->email=$request->email;
         $user->password=$request->password;
-        $user->password_confirmate=$request->password_confirmate;
+
 
         $res=$user->save();
     }
@@ -77,7 +77,7 @@ class RegisterController extends Controller
     {
         //
     }
-    /* public function register(RegisterRequest $request)
+     public function register(RegisterRequest $request)
 {
 
     $this->validator($request->all())->validate();
@@ -91,5 +91,5 @@ class RegisterController extends Controller
 
     return $this->registered($request, $user)
                     ?: redirect($this->redirectPath('/products'));
-} */
+}
 }

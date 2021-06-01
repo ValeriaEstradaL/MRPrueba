@@ -17,8 +17,8 @@ class CreateProductsTable extends Migration
             $table->id();
             $table->string('name',100);
             $table->string('description',260);
-            $table->unsignedDecimal('base_price',2 );
-            $table->unsignedDecimal('taxes',2 );
+            $table->unsignedDecimal('base_price', 3, 2 );
+            $table->unsignedDecimal('taxes', 3, 2 );
             $table->boolean('state');
             $table->unsignedInteger('stock');
             $table->unsignedBigInteger('order_id')->nullable(true);

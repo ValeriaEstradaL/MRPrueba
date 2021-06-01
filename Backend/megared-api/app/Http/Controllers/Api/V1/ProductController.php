@@ -32,8 +32,8 @@ class ProductController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(ProductRequest $request)
-    {   dd($request);
-         $request->validate();
+    {
+        $validated = $request->validated();
         /* $user = Auth::user(); */
 
         $product = new Product;
