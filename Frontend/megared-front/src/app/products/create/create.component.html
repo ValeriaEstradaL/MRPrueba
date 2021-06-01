@@ -1,0 +1,31 @@
+<form [formGroup]="form" (ngSubmit)="createProduct()">
+  <div class="mb-3">
+    <label for="nombre" class="form-label">Nombre del producto</label>
+    <input type="text" formControlName="name" class="form-control" id="nombre" required>
+  </div>
+
+    <div class="mb-3">
+      <label for="Descripcion" class="form-label">Descripcion del producto</label>
+      <input type="text" class="form-control" formControlName="description"  id="Descripcion"required >
+    </div>
+
+      <div class="mb-3">
+        <label for="precio" class="form-label">Precio base </label>
+        <input type="number" class="form-control" formControlName="base_price"  id="precio" placeholder="Recuerde que debe ser decimal no superior a 1.00" required>
+      </div>
+
+        <div class="mb-3">
+          <label for="taxes" class="form-label">Tasa de impuestos</label>
+          <input type="number" class="form-control" formControlName="taxes"  id="taxes" required>
+        </div>
+        <div class="mb-3">
+          <label for="state" class="form-label">Estado</label>
+          <input type="number" class="form-control" formControlName="state"  id="state" placeholder="Escriba 1 para disponible y 0 para no disponible " required>
+        </div>
+        <div class="mb-3">
+          <label for="Stock" class="form-label">Cantidad</label>
+          <input type="number" class="form-control" formControlName="stock" id="Stock" required>
+        </div>
+
+  <button  class="btn btn-primary" type="submit">Crear Producto</button>
+</form>

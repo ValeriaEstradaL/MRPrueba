@@ -1,0 +1,36 @@
+<div class="container">
+
+  <div class="form-sec">
+    <h4>Formulario de registro</h4>
+
+   <form  [formGroup]="form" (ngSubmit)="registerUser()">
+      <div class="form-group">
+        <label>Nombre:</label>
+        <input type="text" class="form-control" formControlName="name" id="name" placeholder="Enter Name" name="name">
+      </div>
+      <div class="form-group">
+        <label>Correo:</label>
+        <input type="email" class="form-control"formControlName="email" id="email" placeholder="Enter Email" name="email">
+      </div>
+
+      <div class="form-group">
+        <label>Contraseña</label>
+        <input type="password" class="form-control" formControlName="password" id="phone" placeholder="Escriba la contraseña" >
+      </div>
+    <div class="form-group">
+        <label>Confirmar contraseña</label>
+        <input type="password" class="form-control" formControlName="password_confirmation" id="confirm" placeholder="Escriba de nuevo la contraseña">
+      </div>
+
+    <!-- <div class="form-group">
+        <label>Rol del nuevo usuario</label>
+        <textarea name="issues" class="form-control" id="iq" placeholder="Enter your Issues/query"></textarea>
+      </div>
+ -->
+
+      <button type="submit" class="btn btn-default">Registrar Usuario</button>
+    </form>
+    </div>
+
+
+  </div>

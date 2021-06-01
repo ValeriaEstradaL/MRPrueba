@@ -1,0 +1,50 @@
+
+<button type="button" class="btn btn-primary" routerLink="/products/create" >Crear</button>
+
+<table class="table table-striped">
+  <thead>
+   <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Descipción</th>
+      <th scope="col">Precio Base</th>
+      <th scope="col">Impuestos</th>
+      <th scope="col">Estado</th>
+      <th scope="col">Cantidad</th>
+      <th scope="col">Acciones</th>
+
+
+    </tr>
+</thead>
+  <tbody>
+    <tr *ngFor="let p of products">
+      <td>
+        {{p.id}}
+      </td>
+      <td>
+        {{p.name}}
+      </td>
+      <td>
+        {{p.description}}
+      </td>
+      <td>
+        {{p.base_price}}
+      </td>
+      <td>
+        {{p.taxes}}
+      </td>
+      <td>
+        {{p.state}}
+      </td>
+      <td>
+        {{p.stock}}
+      </td>
+      <td>
+        <button type="button" class="btn btn-primary">Editar</button>
+  <button type="button" class="btn btn-secondary">Eliminar</button>
+
+      </td>
+    </tr>
+
+  </tbody>
+</table>
