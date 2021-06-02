@@ -1,1 +1,39 @@
-<p>admin works!</p>
+
+
+<button type="button" class="btn btn-primary" routerLink="/admin/register" >Crear</button>
+
+<table class="table table-striped">
+  <thead>
+   <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Correo </th>
+      <th scope="col">Rol</th>
+
+
+    </tr>
+</thead>
+  <tbody>
+    <tr *ngFor="let u of users">
+      <td>
+        {{u.id}}
+      </td>
+      <td>
+        {{u.name}}
+      </td>
+      <td>
+        {{u.email}}
+      </td>
+    <!--   <td>
+        {{u.role}}
+      </td> -->
+
+      <td>
+        <button id="edit" type="button" class="btn btn-primary">Bloquear/Desbloquear</button>
+  <button type="button" class="btn btn-secondary">Eliminar</button>
+
+      </td>
+    </tr>
+
+  </tbody>
+</table>

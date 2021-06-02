@@ -29,10 +29,15 @@ const routes: Routes = [
 
   },
   {
-    path: 'register',
+    path: 'admin/register',
     component: RegisterComponent
 
   },
+  {
+    path: 'admin/users',
+    component: AdminComponent
+
+  }
 ];
 
 @NgModule({
