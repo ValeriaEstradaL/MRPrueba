@@ -4,7 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RegisterController;
-
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,7 +32,8 @@ Route::group([
 Route::group(['middleware' => ['cors']], function () {
     //Rutas a las que se permitirá acceso
     Route::apiResource('v1/products', App\Http\Controllers\Api\V1\ProductController::class);
-    Route::apiResource('v1/register', \App\Http\Controllers\Api\V1\RegisterController::class);
-
+    Route::apiResource('v1/register', \App\Http\Controllers\Api\V1\RegisterController::class)->names('admin.registro');
+    Route::apiResource('v1/admin/users', App\Http\Controllers\Api\V1\AuthController::class );
 });
+
 
